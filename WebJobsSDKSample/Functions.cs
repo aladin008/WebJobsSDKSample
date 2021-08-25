@@ -139,10 +139,10 @@ namespace WebJobsSDKSample
 
         }
 
-        public static void ProcessQueueMessage([QueueTrigger("queue")] string message, ILogger logger)
-        {
-            logger.LogInformation(message);
-        }
+        //public static void ProcessQueueMessage([QueueTrigger("queue")] string message, ILogger logger)
+        //{
+        //    logger.LogInformation(message);
+        //}
 
     }
 }
