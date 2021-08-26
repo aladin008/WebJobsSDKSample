@@ -37,25 +37,25 @@ namespace WebJobsSDKSample
     public class Functions
     {
         static HttpClient client = new HttpClient();
-        static public void GetProductAsync()
-        {
-            string path = "https://productsapp20210818221653.azurewebsites.net/api/Products";
-            client.BaseAddress = new Uri(path);
-            client.DefaultRequestHeaders.Accept.Add(
-           new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = client.GetAsync(path).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                var message = response.Content.ReadAsStringAsync().Result;  //Make sure to add a reference to System.Net.Http.Formatting.dll
+        //static public void GetProductAsync()
+        //{
+        //    string path = "https://productsapp20210818221653.azurewebsites.net/api/Products";
+        //    client.BaseAddress = new Uri(path);
+        //    client.DefaultRequestHeaders.Accept.Add(
+        //   new MediaTypeWithQualityHeaderValue("application/json"));
+        //    var response = client.GetAsync(path).Result;
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        var message = response.Content.ReadAsStringAsync().Result;  //Make sure to add a reference to System.Net.Http.Formatting.dll
 
-                LogMessage(message);
+        //        LogMessage(message);
 
 
-                //logger.LogInformation(message);
+        //        //logger.LogInformation(message);
 
-            }
-            return;
-        }
+        //    }
+        //    return;
+        //}
 
         static public void PutProductAsync()
         {
